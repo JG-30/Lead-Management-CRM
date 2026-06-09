@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0a0b0f;
+  color: #e8eaf0;
+  font-family: 'DM Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #363c4a;
+  border-radius: 3px;
+}
+
+@layer components {
+  .input-base {
+    @apply w-full bg-bg-tertiary border border-border rounded-lg px-3 py-2 text-text-primary text-sm outline-none transition-colors placeholder:text-text-muted focus:border-accent;
+  }
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-4 py-2 bg-accent hover:bg-accent-dark text-white rounded-lg text-sm font-medium transition-colors cursor-pointer border-none;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 px-4 py-2 bg-transparent hover:bg-bg-tertiary text-text-secondary border border-border rounded-lg text-sm font-medium transition-colors cursor-pointer;
+  }
+  .card {
+    @apply bg-bg-secondary border border-border rounded-xl;
+  }
+  .badge {
+    @apply inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+}
